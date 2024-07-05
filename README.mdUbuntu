@@ -1,0 +1,67 @@
+This note is specific to MySQL setup with Ubuntu environment.
+1. As the Ubuntu VM via VirtualBox is headless, we ONLY focus with MySQL CLI interface. Follow the README.mdWins for workbench and other related tools to import or convert .csv or .json files as a table for data analysis. 
+
+*** Install mysql-server
+vagrant@ubuntu-jammy:~$ history
+    1  sudo apt update -y
+    2  sudo apt install mysql-server
+    4  sudo systemctl start mysql.service
+    5  sudo mysql
+    7  cat /etc/os-release
+    8  sudo apt update
+vagrant@ubuntu-jammy:~$
+
+
+*** Installation on Ubuntu 22.04
+vagrant@ubuntu-jammy:~$ cat /etc/os-release
+PRETTY_NAME="Ubuntu 22.04.3 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.3 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=jammy
+vagrant@ubuntu-jammy:~$ sudo apt update
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1791 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1100 kB]
+Fetched 3148 kB in 2s (1959 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+38 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+***Sucessful installation & verification
+vagrant@ubuntu-jammy:~$ mysql
+mysql                      mysqld_multi
+mysql_config_editor        mysqld_safe
+mysql_migrate_keyring      mysqldump
+mysql_secure_installation  mysqldumpslow
+mysql_ssl_rsa_setup        mysqlimport
+mysql_tzinfo_to_sql        mysqloptimize
+mysql_upgrade              mysqlpump
+mysqladmin                 mysqlrepair
+mysqlanalyze               mysqlreport
+mysqlbinlog                mysqlshow
+mysqlcheck                 mysqlslap
+mysqld
+vagrant@ubuntu-jammy:~$ sudo mysqlshow
++--------------------+
+|     Databases      |
++--------------------+
+| information_schema |
+| jwang1568          |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+vagrant@ubuntu-jammy:~$
+

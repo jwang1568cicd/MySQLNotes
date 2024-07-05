@@ -1,6 +1,8 @@
 This projects will focus how to use MySQL with Linux, Windows via CLI, GUI based MySQLWorkbench and Python script with mysql-connector.
 
-1. The following reference will be the starting points if you need fundamental understanding about using MySQL before getting into specific CLI and python scripts for creating, accessing and updatinig the DBs.
+1. The specific environment notes are captured in seperate README.mdWins and README.mdUbuntu.
+
+2. The following reference will be the starting points if you need fundamental understanding about using MySQL before getting into specific CLI and python scripts for creating, accessing and updatinig the DBs.
 a. SQL Tutorial for Beginners [Full Course] : https://www.youtube.com/watch?v=7S_tz1z_5bA
 b. Useful installation guide for Ubuntu based MySQL server: https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04. The attached Vagrant file is a reference if you are using VirtualBox VM. 
 c. For Windows environment, we will try with MySQL-workbench alone with Python scripts.

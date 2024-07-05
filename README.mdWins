@@ -1,0 +1,25 @@
+This section of notes is specific for MySQL Windows 11 environment setup via choco package manager.
+
+1. MySQL (Community Server) 8.0.3: choco install mysql
+2. MySQL Workbench 8.0.38: choco install mysql.workbench
+3. MySQL Utilities 1.6.5: choco install mysql.utilities
+
+
+CICD-Student@DESKTOP-FNUA4LH MINGW64 ~/cicdclass/MySQLNotes (main)
+$ mysql
+mysql.exe                      mysql_upgrade.exe              mysqldump.exe
+mysql_config_editor.exe        mysqladmin.exe                 mysqldumpslow.pl
+mysql_migrate_keyring.exe      mysqlbinlog.exe                mysqlimport.exe
+mysql_secure_installation.exe  mysqlcheck.exe                 mysqlpump.exe
+mysql_ssl_rsa_setup.exe        mysqld.exe                     mysqlshow.exe
+mysql_tzinfo_to_sql.exe        mysqld_multi.pl                mysqlslap.exe
+
+4. Screenshot of MySQL workbench is attached as a reference.
+
+5. The JWang1568Class.sql is a verification script used to verify the MySQL environment setup.
+6. The following .csv files are also provided as samples for data analysis.
+CICD-Student@DESKTOP-FNUA4LH MINGW64 ~/cicdclass/MySQLNotes (main)
+$ ls -la *.csv
+-rw-r--r-- 1 CICD-Student 197121 4233846 Jul  5 08:42 invoices_db.csv
+-rw-r--r-- 1 CICD-Student 197121 5721683 Jul  5 08:42 jobs_db.csv
+
